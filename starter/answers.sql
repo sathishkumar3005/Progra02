@@ -1,5 +1,4 @@
-
-use info80;
+use vigneshdb;
 create table student
 (
 StudentID int(5) PRIMARY KEY,
