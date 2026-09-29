@@ -1,4 +1,4 @@
-USE assignmentDb;
+USE assignmentdb;
 
 CREATE TABLE Student
 (
@@ -7,9 +7,9 @@ CREATE TABLE Student
     DOB DATE NULL,
     Gender VARCHAR(10) NOT NULL,
     DEPARTMENTID INT,
-    
+
     CONSTRAINT UQ_StudentName UNIQUE (StudentName),
-    
+
     CONSTRAINT FK_department
         FOREIGN KEY (DEPARTMENTID)
         REFERENCES Department(DEPARTMENTID)
