@@ -1,15 +1,18 @@
-use vigneshdb;
-create table student
-(
-StudentID int(5) PRIMARY KEY,
-StudentName varchar(20)  not null,
-DOB Date null,
-Gender varchar(10) Not null,
-DEPARTMENTID int(5),
-constraint UQ_StudentName UNIQUE(StudentName),
-constraint FK_department
-foreign key(DEPARTMENTID)
-references department(DEPARTMENTID)
-);
-desc student;
+USE assignmentDb;
 
+CREATE TABLE Student
+(
+    StudentID INT PRIMARY KEY,
+    StudentName VARCHAR(20) NOT NULL,
+    DOB DATE NULL,
+    Gender VARCHAR(10) NOT NULL,
+    DEPARTMENTID INT,
+    
+    CONSTRAINT UQ_StudentName UNIQUE (StudentName),
+    
+    CONSTRAINT FK_department
+        FOREIGN KEY (DEPARTMENTID)
+        REFERENCES Department(DEPARTMENTID)
+);
+
+DESC Student;
